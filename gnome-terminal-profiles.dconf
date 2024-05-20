@@ -1,0 +1,54 @@
+[/]
+default='6a03a51c-9e21-4473-a8e7-803505aa4906'
+list=['26f0b2c4-b2fb-432f-b700-bdd6dd5e6803', '6a03a51c-9e21-4473-a8e7-803505aa4906']
+
+[:26f0b2c4-b2fb-432f-b700-bdd6dd5e6803]
+audible-bell=false
+background-color='#2E3440'
+background-transparency-percent=29
+bold-color='#D8DEE9'
+bold-color-same-as-fg=true
+cursor-background-color='rgb(216,222,233)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(59,66,82)'
+default-size-columns=203
+default-size-rows=100
+font='FiraCode Nerd Font 12'
+foreground-color='#D8DEE9'
+highlight-background-color='rgb(136,192,208)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(46,52,64)'
+nord-gnome-terminal-version='0.1.0'
+palette=['#3B4252', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#88C0D0', '#E5E9F0', '#4C566A', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#8FBCBB', '#ECEFF4']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='Nord'
+
+[:6a03a51c-9e21-4473-a8e7-803505aa4906]
+allow-bold=true
+audible-bell=false
+background-color='#1A1A1B1B2626'
+background-transparency-percent=29
+bold-color='#C0C0CACAF5F5'
+bold-color-same-as-fg=true
+cursor-background-color='#C0C0CACAF5F5'
+cursor-colors-set=true
+cursor-foreground-color='#1A1A1B1B2626'
+default-size-columns=203
+default-size-rows=100
+font='FiraCode Nerd Font 12'
+foreground-color='#C0C0CACAF5F5'
+highlight-background-color='rgb(136,192,208)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(46,52,64)'
+nord-gnome-terminal-version='0.1.0'
+palette=['#414148486868', '#F7F776768E8E', '#9E9ECECE6A6A', '#E0E0AFAF6868', '#7A7AA2A2F7F7', '#BBBB9A9AF7F7', '#7D7DCFCFFFFF', '#A9A9B1B1D6D6', '#414148486868', '#F7F776768E8E', '#9E9ECECE6A6A', '#E0E0AFAF6868', '#7A7AA2A2F7F7', '#BBBB9A9AF7F7', '#7D7DCFCFFFFF', '#C0C0CACAF5F5']
+use-system-font=false
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='Tokyo Night'

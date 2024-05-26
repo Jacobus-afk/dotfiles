@@ -2,6 +2,7 @@ require('lazy').setup({
   require 'plugins.one-liners',
   require 'plugins.colorscheme',
   require 'plugins.treesitter',
+  require 'plugins.nvim-tree',
   require 'plugins.gitsigns',
   require 'plugins.which-key',
   require 'plugins.telescope',
@@ -10,6 +11,7 @@ require('lazy').setup({
   require 'plugins.conform',
   require 'plugins.lint',
   require 'plugins.todo-comments',
+  require 'plugins.autopairs',
   -- TODO: add fugitive, use primeagen's config?
 }, {
   ui = {

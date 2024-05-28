@@ -49,7 +49,7 @@ return {
             luasnip.lsp_expand(args.body)
           end,
         },
-        completion = { completeopt = 'menu,menuone,noinsert' },
+        completion = { completeopt = 'menu,menuone,popup,noinsert' },
 
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
@@ -113,6 +113,16 @@ return {
           format = lspkind.cmp_format {
             maxwidth = 50,
             ellipsis_char = '...',
+          },
+        },
+        window = {
+          completion = {
+            border = 'rounded',
+            winhighlight = 'Normal:CmpNormal',
+          },
+          documentation = {
+            border = 'rounded',
+            winhighlight = 'Normal:CmpDocNormal',
           },
         },
       }

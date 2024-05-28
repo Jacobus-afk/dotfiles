@@ -8,10 +8,15 @@ require('lazy').setup({
   require 'plugins.telescope',
   require 'plugins.cmp',
   require 'plugins.lspconfig',
+  require 'plugins.trouble',
   require 'plugins.conform',
   require 'plugins.lint',
   require 'plugins.todo-comments',
   require 'plugins.autopairs',
+  require 'plugins.dressing',
+  require 'plugins.lualine',
+  -- require 'plugins.noice',
+  -- require 'plugins.nvim-notify',
   -- TODO: add fugitive, use primeagen's config?
 }, {
   ui = {

@@ -12,23 +12,23 @@ return {
     keymap.set('n', '<leader>-', '<cmd>NvimTreeFindFileToggle<CR>', { desc = 'Toggle file explorer' }) -- toggle file explorer
 
     -- Open nvim-tree on startup
-    local nt_group = vim.api.nvim_create_augroup('nvimtree-startup', { clear = true })
-    vim.api.nvim_create_autocmd({ 'VimEnter' }, {
-      callback = function()
-        local first_arg = vim.v.argv[3]
-        if first_arg and vim.fn.isdirectory(first_arg) == 1 then
-          -- Vim creates a buffer for folder. Close it.
-          vim.cmd ':bd 1'
+    -- local nt_group = vim.api.nvim_create_augroup('nvimtree-startup', { clear = true })
+    -- vim.api.nvim_create_autocmd({ 'VimEnter' }, {
+    --   callback = function()
+    --     local first_arg = vim.v.argv[3]
+    --     if first_arg and vim.fn.isdirectory(first_arg) == 1 then
+    --       -- Vim creates a buffer for folder. Close it.
+    --       vim.cmd ':bd 1'
+    --
+    --       local api = require 'nvim-tree.api'
+    --       api.tree.toggle()
+    --       api.tree.expand_all()
+    --     end
+    --   end,
+    --   group = nt_group,
+    -- })
 
-          local api = require 'nvim-tree.api'
-          api.tree.toggle()
-          api.tree.expand_all()
-        end
-      end,
-      group = nt_group,
-    })
-
-    local HEIGHT_RATIO = 0.8 -- You can change this
+    local HEIGHT_RATIO = 0.9 -- You can change this
     local WIDTH_RATIO = 0.5 -- You can change this too
 
     local function my_on_attach(bufnr)
@@ -102,7 +102,7 @@ return {
             local window_h = screen_h * HEIGHT_RATIO
             local window_w_int = math.floor(window_w)
             local window_h_int = math.floor(window_h)
-            local center_x = 2 -- (screen_w - window_w) / 2
+            local center_x = 40 -- (screen_w - window_w) / 2
             local center_y = 2 -- ((vim.opt.lines:get() - window_h) / 2) - vim.opt.cmdheight:get()
             return {
               border = 'rounded',

@@ -1,5 +1,6 @@
 --  For more options, you can see `:help option-list`
-
+-- for nvim-possession to work corectly?
+-- vim.go.ssop += curdir
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.

@@ -218,6 +218,7 @@ return {
         'isort',
         'black',
         'markdownlint',
+        'mdformat',
         -- 'ruff',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }

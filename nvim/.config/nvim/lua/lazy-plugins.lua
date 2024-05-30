@@ -4,7 +4,7 @@ require('lazy').setup({
   require 'plugins.treesitter',
   -- require 'plugins.nvim-tree',
   require 'plugins.neotree',
-  require 'plugins.gitsigns',
+  require 'plugins.git-integration',
   require 'plugins.which-key',
   require 'plugins.telescope',
   require 'plugins.cmp',
@@ -22,6 +22,7 @@ require('lazy').setup({
   -- require 'plugins.possession',
   -- require 'plugins.noice',
   -- require 'plugins.nvim-notify',
+  -- require 'plugins.nvim-lsp-notify',
   -- TODO: add fugitive, use primeagen's config?
 }, {
   ui = {

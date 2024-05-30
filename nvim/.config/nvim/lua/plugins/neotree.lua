@@ -27,6 +27,11 @@ return {
   config = function()
     require('neo-tree').setup {
       -- TODO: Figure out how to change explore keymaps to use h to expand dir and l to open file
+      window = {
+        mappings = {
+          ['l'] = 'open',
+        },
+      },
 
       -- default_component_configs = {
       --   git_status = {

@@ -14,6 +14,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', 'L', '<cmd>bnext<CR>')
 vim.keymap.set('n', 'H', '<cmd>bprev<CR>')
 
+-- Yank to clipboard
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier

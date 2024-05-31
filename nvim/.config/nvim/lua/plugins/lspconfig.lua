@@ -170,7 +170,10 @@ return {
                 --       autopep8 = { enabled = false },
                 -- pyflakes = { enabled = false },
                 --       pylint = { enabled = false },
-                pycodestyle = { enabled = false },
+                pycodestyle = {
+                  ignore = { 'W391' },
+                  maxLineLength = 100,
+                },
                 --       mccabe = { enabled = false },
               },
             },

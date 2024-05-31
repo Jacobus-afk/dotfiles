@@ -4,8 +4,11 @@
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
+-- Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
+
+-- Give indication of column limit
+vim.opt.colorcolumn = "100"
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'

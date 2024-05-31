@@ -5,12 +5,19 @@ startup_mode = "Fullscreen"
 
 [font]
 
-normal.family = "FiraCode Nerd Font"
-bold.family = "FiraCode Nerd Font"
-italic.family = "FiraCode Nerd Font"
-bold_italic.family = "FiraCode Nerd Font"
+normal.family = "IosevkaTerm Nerd Font"
+bold.family = "IosevkaTerm Nerd Font"
+italic.family = "IosevkaTerm Nerd Font"
+bold_italic.family = "IosevkaTerm Nerd Font"
 
-size = 8.0
+size = 9.0
+
+# normal.family = "FiraCode Nerd Font"
+# bold.family = "FiraCode Nerd Font"
+# italic.family = "FiraCode Nerd Font"
+# bold_italic.family = "FiraCode Nerd Font"
+#
+# size = 8.0
 
 
 # TokyoNight Alacritty Colors

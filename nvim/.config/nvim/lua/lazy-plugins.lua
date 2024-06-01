@@ -7,6 +7,7 @@ require('lazy').setup({
   require 'plugins.git-integration',
   require 'plugins.which-key',
   require 'plugins.telescope',
+  require 'plugins.telescope-undo',
   require 'plugins.cmp',
   require 'plugins.lspconfig',
   require 'plugins.trouble',

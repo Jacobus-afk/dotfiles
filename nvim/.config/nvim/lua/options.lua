@@ -8,7 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Give indication of column limit
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = '111'
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'

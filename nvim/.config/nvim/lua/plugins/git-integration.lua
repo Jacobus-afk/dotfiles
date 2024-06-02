@@ -1,6 +1,14 @@
 -- See `:help gitsigns` to understand what the configuration keys do
 return {
   { 'tpope/vim-fugitive' },
+  {
+    'rbong/vim-flog',
+    lazy = true,
+    cmd = { 'Flog', 'Flogsplit', 'Floggit' },
+    dependencies = {
+      'tpope/vim-fugitive',
+    },
+  },
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {

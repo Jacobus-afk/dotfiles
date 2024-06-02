@@ -41,6 +41,13 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 -- vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+-- Preview signature help while in insert mode
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers['signature_help'], {
+  border = 'rounded',
+  close_events = { 'CursorMoved', 'BufHidden' },
+})
+vim.keymap.set('i', '<c-s>', vim.lsp.buf.signature_help)
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

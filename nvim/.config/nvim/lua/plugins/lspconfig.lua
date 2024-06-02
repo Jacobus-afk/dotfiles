@@ -172,7 +172,7 @@ return {
                 --       pylint = { enabled = false },
                 pycodestyle = {
                   ignore = { 'W391' },
-                  maxLineLength = 100,
+                  maxLineLength = 110,
                 },
                 --       mccabe = { enabled = false },
               },

@@ -57,11 +57,15 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
+        defaults = {
+          set_env = {
+            LESS = '',
+            DELTA_PAGER = 'less',
+          },
+          --   mappings = {
+          --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+          --   },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
@@ -110,6 +114,27 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- delta for git view
+
+      local previewers = require 'telescope.previewers'
+      local from_entry = require 'telescope.from_entry'
+
+      local delta = previewers.new_termopen_previewer {
+        get_command = function(entry)
+          local p = from_entry.path(entry, true, false)
+          if entry.status == '??' or 'A ' then
+            return { 'git', '-c', 'delta.side-by-side=true', 'diff', p }
+          end
+          return { 'git', '-c', 'delta.side-by-side=true', 'diff', p .. '^!' }
+        end,
+      }
+
+      vim.keymap.set('n', '<Leader>sG', function()
+        builtin.git_status { previewer = delta, layout_strategy = 'vertical' }
+      end)
+
+      -- delta for git view
     end,
   },
 }

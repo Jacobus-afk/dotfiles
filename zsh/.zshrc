@@ -68,11 +68,11 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias ll='ls -laF --group-directories-first'
 alias vim='nvim'
-alias cbr='git branch --sort=-committerdate | fzf --header-first --header "Checkout recent branch" --preview "git diff {1} | delta" --layout=reverse --preview-window=down:85% | xargs git checkout'
+alias cbr='git branch --sort=-committerdate | fzf-tmux -p80% --header-first --header "Checkout recent branch" --preview "git diff {1} | delta" --layout=reverse --preview-window=down:85% | xargs git checkout'
 
 function vdiff() {
       local fname
-      fname=$(git diff $@ --name-only | fzf --preview "git diff $@ -- {-1} | delta" --layout=reverse --header "See git diffs" --header-first --preview-window=down:85%) || return
+      fname=$(git diff $@ --name-only | fzf-tmux -p80% --preview "git diff $@ -- {-1} | delta" --layout=reverse --header "See git diffs" --header-first --preview-window=down:85%) || return
       vim "$fname"
 }
 

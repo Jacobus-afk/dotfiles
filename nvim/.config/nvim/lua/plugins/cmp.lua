@@ -115,6 +115,9 @@ return {
             ellipsis_char = '...',
           },
         },
+        experimental = {
+          ghost_text = false,
+				},
         window = {
           completion = {
             border = 'rounded',

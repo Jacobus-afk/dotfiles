@@ -9,11 +9,20 @@ return {
   },
   keys = {
     {
-      '<leader>-',
+      '<leader>--',
       function()
         require('neo-tree.command').execute { toggle = true, dir = vim.uv.cwd() }
+        -- require('neo-tree.command').execute { toggle = true, dir = vim.fn.expand '%:p:h' }
       end,
       desc = 'Explorer NeoTree (cwd)',
+    },
+    {
+      '<leader>-f',
+      function()
+        -- require('neo-tree.command').execute { toggle = true, dir = vim.uv.cwd() }
+        require('neo-tree.command').execute { toggle = true, dir = vim.fn.expand '%:p:h' }
+      end,
+      desc = 'Explorer NeoTree (current file)',
     },
     {
       '<leader>ge',
@@ -34,21 +43,27 @@ return {
       },
 
       -- default_component_configs = {
-      --   git_status = {
-      --     symbols = {
-      --       -- Change type
-      --       added = '✚', -- but this is redundant info if you use git_status_colors on the name
-      --       modified = '', -- but this is redundant info if you use git_status_colors on the name
-      --       deleted = '✖', -- this can only be used in the git_status source
-      --       renamed = '󰁕', -- this can only be used in the git_status source
-      --       -- Status type
-      --       untracked = '',
-      --       ignored = '',
-      --       unstaged = '󰄱',
-      --       staged = '',
-      --       conflict = '',
-      --     },
-      --   },
+      --   -- filesystem = {
+      --   --   follow_current_file = {
+      --   --     enabled = true,
+      --   --     leave_dirs_open = true,
+      --   --   },
+      --   -- },
+      --   --   git_status = {
+      --   --     symbols = {
+      --   --       -- Change type
+      --   --       added = '✚', -- but this is redundant info if you use git_status_colors on the name
+      --   --       modified = '', -- but this is redundant info if you use git_status_colors on the name
+      --   --       deleted = '✖', -- this can only be used in the git_status source
+      --   --       renamed = '󰁕', -- this can only be used in the git_status source
+      --   --       -- Status type
+      --   --       untracked = '',
+      --   --       ignored = '',
+      --   --       unstaged = '󰄱',
+      --   --       staged = '',
+      --   --       conflict = '',
+      --   --     },
+      --   --   },
       -- },
     }
   end,

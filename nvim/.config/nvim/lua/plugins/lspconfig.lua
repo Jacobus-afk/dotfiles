@@ -165,6 +165,12 @@ return {
             -- configure plugins in pylsp
             pylsp = {
               plugins = {
+                jedi_completion = {
+                  fuzzy = true,
+                  include_function_objects = true,
+                  include_class_objects = true,
+                },
+
                 --       flake8 = { enabled = false },
                 --       yapf = { enabled = false },
                 --       autopep8 = { enabled = false },

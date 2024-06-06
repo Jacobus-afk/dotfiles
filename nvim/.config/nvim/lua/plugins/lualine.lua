@@ -20,7 +20,9 @@ return {
   },
   config = function()
     require('lualine').setup {
-      --     -- sections = { lualine_c = { require('auto-session.lib').current_session_name } },
+      -- options = {
+      --   always_divide_middle = true,
+      -- },
       sections = {
         lualine_a = {
           {
@@ -43,6 +45,40 @@ return {
         --         --   end,
         --         -- },
         --       },
+      },
+      winbar = {
+        -- lualine_a = {
+        --   {
+        --     'buffers',
+        --     mode = 3,
+        --   },
+        -- },
+        lualine_b = {
+          {
+            'filename',
+            path = 3,
+            symbols = {
+              modified = ' ●',
+            },
+          },
+        },
+      },
+      inactive_winbar = {
+        -- lualine_a = {
+        --   {
+        --     'buffers',
+        --     mode = 1,
+        --   },
+        -- },
+        lualine_b = {
+          {
+            'filename',
+            path = 3,
+            symbols = {
+              modified = ' ●',
+            },
+          },
+        },
       },
     }
   end,

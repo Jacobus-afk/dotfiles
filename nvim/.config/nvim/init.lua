@@ -8,6 +8,8 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
+require 'globals'
+
 require 'options'
 
 require 'keymaps'
@@ -17,3 +19,4 @@ require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
+

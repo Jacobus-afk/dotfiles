@@ -24,7 +24,9 @@ require('lazy').setup({
   -- require 'plugins.noice',
   -- require 'plugins.nvim-notify',
   -- require 'plugins.nvim-lsp-notify',
-  -- TODO: add fugitive, use primeagen's config?
+
+  -- youtube tutorial
+  {dir = "/home/dev-pc/src/stackmap.nvim/"},
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

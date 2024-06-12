@@ -19,6 +19,7 @@ require('lazy').setup({
   require 'plugins.lualine',
   require 'plugins.vim-tmux-navigator',
   require 'plugins.markdown',
+  require 'plugins.lazydev',
   -- require 'plugins.swenv',
   -- require 'plugins.possession',
   -- require 'plugins.noice',
@@ -26,7 +27,7 @@ require('lazy').setup({
   -- require 'plugins.nvim-lsp-notify',
 
   -- youtube tutorial
-  {dir = "/home/dev-pc/src/stackmap.nvim/"},
+  { dir = '/home/dev-pc/src/stackmap.nvim/' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

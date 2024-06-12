@@ -204,6 +204,9 @@ return {
           -- capabilities = {},
           settings = {
             Lua = {
+              format = {
+                enable = false,
+              },
               completion = {
                 callSnippet = 'Replace',
               },

@@ -41,7 +41,7 @@ return {
     config = function()
       -- disable autoformat for now
       vim.g.disable_autoformat = true
-      require("conform").setup({
+      require('conform').setup {
         notify_on_error = false,
         format_on_save = function(bufnr)
           -- Disable "format_on_save lsp_fallback" for languages that don't
@@ -66,8 +66,8 @@ return {
           -- is found.
           -- javascript = { { "prettierd", "prettier" } },
         },
-      })
-      vim.api.nvim_create_user_command('FormatDisable', function(args)
+      }
+      vim.api.nvim_create_user_command('FormatOnSaveDisable', function(args)
         if args.bang then
           -- FormatDisable! just disables autoformat for current buffer
           vim.b.disable_autoformat = true
@@ -78,7 +78,7 @@ return {
         desc = 'Disable autoformat-on-save',
         bang = true,
       })
-      vim.api.nvim_create_user_command('FormatEnable', function()
+      vim.api.nvim_create_user_command('FormatOnSaveEnable', function()
         vim.b.disable_autoformat = false
         vim.g.disable_autoformat = false
       end, {

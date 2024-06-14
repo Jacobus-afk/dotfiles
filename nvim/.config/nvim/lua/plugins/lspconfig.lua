@@ -99,6 +99,13 @@ return {
           --  See `:help K` for why this keymap.
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
+          -- Preview signature help while in insert mode
+          vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers['signature_help'], {
+            border = 'rounded',
+            close_events = { 'CursorMoved', 'BufHidden' },
+          })
+          vim.keymap.set('i', '<c-s>', vim.lsp.buf.signature_help)
+
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header.
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -241,11 +248,15 @@ return {
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
+            local handlers = {
+              ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded"}),
+            }
             local server = servers[server_name] or {}
             -- This handles overriding only values explicitly passed
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for tsserver)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+            server.handlers = handlers
             require('lspconfig')[server_name].setup(server)
           end,
         },

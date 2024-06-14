@@ -47,22 +47,22 @@ return {
 
         -- Actions
         -- visual mode
-        map('v', '<leader>hs', function()
+        map('v', '<leader>os', function()
           gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
         end, { desc = 'stage git hunk' })
-        map('v', '<leader>hr', function()
+        map('v', '<leader>or', function()
           gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
         end, { desc = 'reset git hunk' })
         -- normal mode
-        map('n', '<leader>gs', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
-        map('n', '<leader>gr', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
-        map('n', '<leader>gS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
-        map('n', '<leader>gu', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
-        map('n', '<leader>gR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
-        map('n', '<leader>gp', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
-        map('n', '<leader>gb', gitsigns.blame_line, { desc = 'git [b]lame line' })
-        map('n', '<leader>gd', gitsigns.diffthis, { desc = 'git [d]iff against index' })
-        map('n', '<leader>gD', function()
+        map('n', '<leader>os', gitsigns.stage_hunk, { desc = 'git [s]tage hunk' })
+        map('n', '<leader>or', gitsigns.reset_hunk, { desc = 'git [r]eset hunk' })
+        map('n', '<leader>oS', gitsigns.stage_buffer, { desc = 'git [S]tage buffer' })
+        map('n', '<leader>ou', gitsigns.undo_stage_hunk, { desc = 'git [u]ndo stage hunk' })
+        map('n', '<leader>oR', gitsigns.reset_buffer, { desc = 'git [R]eset buffer' })
+        map('n', '<leader>op', gitsigns.preview_hunk, { desc = 'git [p]review hunk' })
+        map('n', '<leader>ob', gitsigns.blame_line, { desc = 'git [b]lame line' })
+        map('n', '<leader>od', gitsigns.diffthis, { desc = 'git [d]iff against index' })
+        map('n', '<leader>oD', function()
           gitsigns.diffthis '@'
         end, { desc = 'git [D]iff against last commit' })
         -- Toggles

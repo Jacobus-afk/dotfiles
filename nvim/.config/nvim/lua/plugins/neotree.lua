@@ -25,7 +25,7 @@ return {
       desc = 'Explorer NeoTree (current file)',
     },
     {
-      '<leader>ge',
+      '<leader>oe',
       function()
         require('neo-tree.command').execute { source = 'git_status', toggle = true }
       end,

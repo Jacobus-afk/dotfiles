@@ -100,8 +100,8 @@ Edit `~/.gitconfig` and add the following
 
 [Semshi](https://github.com/numirias/semshi) provides semantic highlighting for
 python in neovim. It results in things like functions not having the same
-default highlighting as variables. One caveat, though is that it **requires
-pynvim in the venv**
+default highlighting as variables. One caveat, though is that it ⚠️**requires
+pynvim in the venv**⚠️
 
 ## Better directory traversal with zoxide
 

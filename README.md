@@ -51,8 +51,8 @@ To allow **direnv** to automatically enable the virtual environtment,
 add a `.envrc` file to your project that contains the following:
 
 ```shell
-export VIRTUAL_ENV=<YOUR_PROJECT_ENV_DIR>
-layout python3
+source <VENV_NAME>/bin/activate
+unset PS1
 ```
 
 ## Better git diffs with delta

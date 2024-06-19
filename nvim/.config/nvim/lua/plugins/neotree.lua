@@ -18,10 +18,10 @@ return {
     },
     {
       '<leader>-f',
-      function()
-        -- require('neo-tree.command').execute { toggle = true, dir = vim.uv.cwd() }
-        require('neo-tree.command').execute { toggle = true, dir = vim.fn.expand '%:p:h' }
-      end,
+      ':Neotree reveal<CR>',
+      -- function()
+      --   require('neo-tree.command').execute { toggle = true, dir = vim.fn.expand '%:p:h' }
+      -- end,
       desc = 'Explorer NeoTree (current file)',
     },
     {
@@ -35,11 +35,17 @@ return {
 
   config = function()
     require('neo-tree').setup {
-      -- TODO: Figure out how to change explore keymaps to use h to expand dir and l to open file
       window = {
         mappings = {
           ['l'] = 'open',
         },
+        filesystem = {
+          follow_current_file = {
+            enabled = true,
+            leave_dirs_open = false,
+          },
+        },
+        -- buffers = { follow_current_file = { enable = true } },
       },
 
       -- default_component_configs = {

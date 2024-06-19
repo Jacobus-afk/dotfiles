@@ -12,6 +12,7 @@ return {
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      'folke/trouble.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
         'nvim-telescope/telescope-fzf-native.nvim',
 
@@ -57,7 +58,16 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
+
         defaults = {
+          mappings = {
+            i = {
+              ['<a-t>'] = function(...)
+                return require('trouble.providers.telescope').open_selected_with_trouble(...)
+              end,
+            },
+          },
+
           set_env = {
             LESS = '',
             DELTA_PAGER = 'less',

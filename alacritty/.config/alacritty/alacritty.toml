@@ -1,6 +1,6 @@
 [window]
 
-opacity = 0.8
+opacity = 0.9
 startup_mode = "Fullscreen"
 
 [font]
@@ -10,7 +10,7 @@ bold.family = "IosevkaTerm Nerd Font"
 italic.family = "IosevkaTerm Nerd Font"
 bold_italic.family = "IosevkaTerm Nerd Font"
 
-size = 9.0
+size = 10.0
 
 # normal.family = "FiraCode Nerd Font"
 # bold.family = "FiraCode Nerd Font"
@@ -19,6 +19,10 @@ size = 9.0
 #
 # size = 8.0
 
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" },
+]
 
 # TokyoNight Alacritty Colors
 # Default colors

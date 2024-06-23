@@ -66,6 +66,11 @@ return {
           -- is found.
           -- javascript = { { "prettierd", "prettier" } },
         },
+        formatters = {
+          black = {
+            prepend_args = { '--line-length', '110' },
+          },
+        },
       }
       vim.api.nvim_create_user_command('FormatOnSaveDisable', function(args)
         if args.bang then

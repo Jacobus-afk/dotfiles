@@ -66,8 +66,8 @@ return {
 
           -- Find references for the word under your cursor.
           -- map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-          map('gr', function ()
-            vim.cmd("Telescope lsp_references show_line=false")
+          map('gr', function()
+            vim.cmd 'Telescope lsp_references show_line=false'
           end, '[G]oto [R]eferences')
 
           -- Jump to the implementation of the word under your cursor.
@@ -170,6 +170,7 @@ return {
       local servers = {
         -- clangd = {},
         -- gopls = {},
+        ruff = {},
         pylsp = {
           settings = {
             -- configure plugins in pylsp
@@ -184,11 +185,12 @@ return {
                 --       flake8 = { enabled = false },
                 --       yapf = { enabled = false },
                 --       autopep8 = { enabled = false },
-                -- pyflakes = { enabled = false },
+                pyflakes = { enabled = false },
                 --       pylint = { enabled = false },
                 pycodestyle = {
-                  ignore = { 'W391' },
-                  maxLineLength = 110,
+                  enabled = false,
+                  -- ignore = { 'W391', 'W504' },
+                  -- maxLineLength = 110,
                 },
                 --       mccabe = { enabled = false },
               },
@@ -249,7 +251,7 @@ return {
         handlers = {
           function(server_name)
             local handlers = {
-              ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded"}),
+              ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' }),
             }
             local server = servers[server_name] or {}
             -- This handles overriding only values explicitly passed

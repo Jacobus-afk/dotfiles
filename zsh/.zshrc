@@ -68,6 +68,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color'
 alias ll='ls -laF --group-directories-first'
 alias vim='nvim'
+alias cbr='git branch --sort=-committerdate | fzf-tmux -p80% --header-first --header "Checkout recent branch" --preview "git diff {1} | delta" --layout=reverse --preview-window=down:85% | xargs git checkout'
+
+function vdiff() {
+      local fname
+      fname=$(git diff $@ --name-only | fzf-tmux -p80% --preview "git diff $@ -- {-1} | delta" --layout=reverse --header "See git diffs" --header-first --preview-window=down:85%) || return
+      vim "$fname"
+}
 
 # Shell integrations
 source /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -76,3 +83,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(direnv hook zsh)"

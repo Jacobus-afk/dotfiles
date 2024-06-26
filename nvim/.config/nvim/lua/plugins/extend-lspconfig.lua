@@ -11,33 +11,34 @@ return {
         desc = "References",
       }
       opts.servers = {
+        ruff = {},
         pylsp = {
           settings = {
             pylsp = {
               plugins = {
                 -- {
-                  jedi_completion = {
-                    fuzzy = true,
-                    include_function_objects = true,
-                    include_class_objects = true,
-                  },
+                jedi_completion = {
+                  fuzzy = true,
+                  include_function_objects = true,
+                  include_class_objects = true,
+                },
 
-                  --       flake8 = { enabled = false },
-                  --       yapf = { enabled = false },
-                  --       autopep8 = { enabled = false },
-                  pyflakes = { enabled = false },
-                  --       pylint = { enabled = false },
-                  pycodestyle = {
-                    enabled = false,
-                    -- ignore = { 'W391', 'W504' },
-                    -- maxLineLength = 110,
-                  },
-                  --       mccabe = { enabled = false },
+                --       flake8 = { enabled = false },
+                --       yapf = { enabled = false },
+                --       autopep8 = { enabled = false },
+                pyflakes = { enabled = false },
+                --       pylint = { enabled = false },
+                pycodestyle = {
+                  enabled = false,
+                  -- ignore = { 'W391', 'W504' },
+                  -- maxLineLength = 110,
+                },
+                --       mccabe = { enabled = false },
                 -- },
               },
             },
-          }
-        }
+          },
+        },
       }
     end,
   },

@@ -22,6 +22,7 @@ size = 10.0
 [keyboard]
 bindings = [
 { key = "F11", action = "ToggleFullscreen" },
+{ key = "NumpadEnter", chars = "\r" },
 ]
 
 # TokyoNight Alacritty Colors

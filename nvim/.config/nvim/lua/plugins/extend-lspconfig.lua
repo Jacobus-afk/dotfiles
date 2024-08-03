@@ -11,6 +11,7 @@ return {
         desc = "References",
       }
       opts.servers = {
+        emmet_ls = {},
         ruff = {},
         pylsp = {
           settings = {

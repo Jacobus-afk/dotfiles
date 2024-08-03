@@ -5,6 +5,7 @@ return {
       "stylua",
       "shfmt",
       "djlint",
+      "emmet-ls",
     },
   },
 }

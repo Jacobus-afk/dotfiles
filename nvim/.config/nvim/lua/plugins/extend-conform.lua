@@ -11,7 +11,7 @@ return {
           prepend_args = { "--line-length", "110" },
         },
         ruff_organize_imports = {
-          prepend_args = { "--line-length", "110" },
+          append_args = { "--line-length", "110" },
         },
       },
     },

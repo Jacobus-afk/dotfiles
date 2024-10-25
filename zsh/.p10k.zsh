@@ -391,7 +391,12 @@
     local res
 
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
-      local branch=${(V)VCS_STATUS_LOCAL_BRANCH}
+      local fallback=${(V)VCS_STATUS_LOCAL_BRANCH}
+      local branch=$(echo $VCS_STATUS_LOCAL_BRANCH | sed -nE 's,[a-z]*/?([A-Z]+-[0-9]+)-.+,\1,p')
+      if [[ -z "$branch" ]]; then
+        branch="$fallback"
+      fi
+
       # If local branch name is at most 32 characters long, show it in full.
       # Otherwise show the first 12 … the last 12.
       # Tip: To always show local branch name in full without truncation, delete the next line.

@@ -4,8 +4,13 @@ return {
     ensure_installed = {
       "stylua",
       "shfmt",
-      "djlint",
-      "emmet-ls",
+      -- "djlint",
+      -- "emmet-ls",
+      "nginx-language-server",
+      -- "vtsls",
+    },
+    ui = {
+      border = "rounded",
     },
   },
 }

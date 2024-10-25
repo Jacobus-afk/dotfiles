@@ -10,6 +10,11 @@ return {
         end,
         desc = "References",
       }
+      opts.diagnostics = {
+        float = {
+          border = "rounded",
+        },
+      }
       opts.servers = {
         emmet_ls = {},
         ruff = {},

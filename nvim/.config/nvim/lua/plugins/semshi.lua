@@ -1,5 +1,6 @@
 -- semshi for additional syntax highlighting.
 -- requires `pynvim` (`python3 -m pip install pynvim`)
+if true then return {} end
 return {
   "wookayin/semshi", -- maintained fork
   ft = "python",
